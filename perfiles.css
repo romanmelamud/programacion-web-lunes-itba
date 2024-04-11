@@ -1,0 +1,49 @@
+.Jefes {
+    text-align: center;
+}
+.Empleados {
+    text-align: center;
+}
+
+.Jefes h2 {
+    font-size: 3vh; /* Ajustado ligeramente más grande */
+    margin-bottom: 2.5vh; /* Ajustado ligeramente más grande */
+    margin-top: 2.5vh; /* Ajustado ligeramente más grande */
+}
+.Empleados h3 {
+    font-size: 3vh; /* Ajustado ligeramente más grande */
+    margin-bottom: 2.5vh; /* Ajustado ligeramente más grande */
+    margin-top: 2.5vh; /* Ajustado ligeramente más grande */
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 2vh;
+    margin-bottom: 2vh;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 18rem;
+}
+
+.card img {
+    height: 42vh; /* Ajustado ligeramente más grande */
+    object-fit: cover;
+}
+
+.card-body {
+    background-color: #f8f9fa;
+}
+
+.linkedin{
+    text-decoration: none;
+    color: none;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%; /* Ancho completo en dispositivos pequeños */
+    }
+}

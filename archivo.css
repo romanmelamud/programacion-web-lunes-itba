@@ -1,0 +1,103 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow:hidden;
+  border-style: none;
+  background-color:  #475584;
+  position: sticky;
+}
+
+li {
+  float: right;
+  padding: 20px;
+  color: white;
+}
+
+li a {
+  display: inline;
+  font-size:large;
+  padding:20px;
+  text-decoration: none;
+  color: inherit;
+  text-decoration: none;
+}
+
+li a :hover{
+  background-color: #b7b7ca;
+}
+
+
+
+
+.contenedor {
+    position: relative;
+    display: flex; /* Utilizar flexbox para alinear elementos */
+    justify-content: space-between; /* Distribuir los elementos uniformemente */
+    align-items: center; /* Centrar verticalmente los elementos */
+    margin-bottom: 5%; /* Espacio entre secciones */
+}
+
+/* Estilos para la imagen */
+.contenedor img {
+    width: 40%; /* Ancho deseado para la imagen */
+    height: auto; /* Altura automática para mantener la proporción */
+    margin-left: 4%;
+    margin-right: 4%; /* Espacio a la derecha de la imagen */
+}
+
+/* Estilos para el contenedor de texto */
+.texto {
+    flex: 1; /* Ocupar todo el espacio restante */
+}
+
+.texto-con-barra {
+    position: relative; /* Para permitir el posicionamiento relativo del contenedor */
+    padding-left: 2%; /* Espacio a la izquierda del texto */
+    margin-bottom: 2%; /* Margen inferior opcional */
+}
+
+.texto-con-barra {
+    position: relative; /* Para permitir el posicionamiento relativo del contenedor */
+    padding-left: 2%; /* Espacio a la izquierda del texto */
+    margin-bottom: 2%; /* Margen inferior opcional */
+}
+
+.texto-con-barra::before {
+    content: ''; /* Contenido del pseudo-elemento (en este caso, una barra) */
+    position: absolute; /* Posicionamiento absoluto en relación con el contenedor padre */
+    top: 0; /* Ubicación desde la parte superior del contenedor */
+    left: 0; /* Ubicación desde el borde izquierdo del contenedor */
+    width: 1%; /* Ancho de la barra */
+    height: 100%; /* Altura de la barra (igual a la altura del contenedor) */
+    background-color: #741276; /* Color de la barra (cambia #ff0000 por el color deseado) */
+}
+footer{
+    background: #e8e5e5;
+    padding-top: 1%;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .contenedor-footer{
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 1%;
+    border-bottom: 1% solid#ccc;
+  }
+  
+  .content-foo{
+    text-align: center;
+  }
+  
+  .content-foo h4{
+    color: #fff;
+    border-bottom: 1% solid #918e92;
+    padding-bottom: 1%;
+    margin-bottom: 0.5%;
+  }
+  .content-foo p{
+    color: #ccc;
+  }
