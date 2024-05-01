@@ -21,15 +21,16 @@
     justify-content: center;
     gap: 2vh;
     margin-bottom: 2vh;
-    flex-wrap: wrap;
+    flex-wrap: wrap;    
 }
 
 .card {
-    width: 18rem;
+    width: 20%; /* Ancho máximo de las tarjetas en porcentaje */
+    margin: 2%; /* Margen entre las tarjetas en porcentaje */    
 }
 
 .card img {
-    height: 42vh; /* Ajustado ligeramente más grande */
+    height: auto; /* Ajustado ligeramente más grande */
     object-fit: cover;
 }
 
@@ -46,4 +47,14 @@
     .card {
         width: 100%; /* Ancho completo en dispositivos pequeños */
     }
+}
+.cronometro-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar verticalmente */
+    text-align: center; /* Centrar horizontalmente */
+}
+
+.cronometro {
+    margin-bottom: 10px; /* Espacio inferior para separar el cronómetro del texto */
 }
