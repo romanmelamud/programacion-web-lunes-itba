@@ -43,7 +43,60 @@ li a :hover{
     margin-right: 4%; /* Espacio a la derecha de la imagen */
 }
 
-/* Estilos para el contenedor de texto */
+.barra_de_navegacion{
+    display: flex;
+    justify-content:space-between;
+    background-color: rgba(88, 69, 69, 0.247);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 1%;
+    padding-right: 1%;
+    white-space: nowrap; /* Evita el ajuste de línea */
+}
+.left {
+  margin-right: auto; /* Mueve el elemento a la izquierda */
+  font-size: 20px;
+  color: black;
+  padding-right: 2%;
+}
+
+.right {
+  margin-left: auto; /* Mueve el elemento a la derecha */
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+}
+.alinearObjetos{
+  display: flex;
+  flex:1;
+  justify-content: space-evenly; /* Distribuye el espacio entre los elementos */
+
+}
+.center {
+  text-decoration: none;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.728);
+  }
+  
+a:hover {
+    color: rgb(79, 18, 70); /* Cambia el color del texto a rojo */
+    text-decoration: underline; /* Subraya el texto */
+    text-decoration: hi;
+    
+}
+
+@media (max-width: 768px) {
+  .barra_de_navegacion {
+    display: list-item;
+  }
+  .right{
+    margin-left: 9%;
+  }
+  .alinearObjetos{
+    margin-right: 15%;
+  }
+}
+
 .texto {
     flex: 1; /* Ocupar todo el espacio restante */
 }
@@ -151,5 +204,4 @@ footer{
     justify-content: space-between; /* Distribuir los elementos uniformemente */
     align-items: center; /* Centrar verticalmente los elementos */
     margin-bottom: 5%; /* Espacio entre secciones */
-  }
-}
+  }}
