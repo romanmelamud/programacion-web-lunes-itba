@@ -63,26 +63,52 @@ li a :hover{
     height: 100%; /* Altura de la barra (igual a la altura del contenedor) */
     background-color: #741276; /* Color de la barra (cambia #ff0000 por el color deseado) */
 }
-@media (max-width: 768px) {
-  .texto {
-    flex: 1; /* Ocupar todo el espacio restante */
+
+.barra-fina {
+  border: none;
+  height: 2px; /* Grosor de la barra */
+  background-color: #741276; /* Color de la barra */
+  margin: 0; /* Eliminar márgenes */
+  width: 100%; /* Ancho deseado para la barra */
+  max-width: 800px; /* Ancho máximo para asegurarse de que no se extienda demasiado en pantallas grandes */
+  margin-left: auto; /* Centrar la barra */
+  margin-right: auto; /* Centrar la barra */
+  margin-bottom: 20px;
 }
 
+@media (max-width: 768px) {
   .texto-con-barra {
-    position: relative; /* Para permitir el posicionamiento relativo del contenedor */
-    padding-left: 2%; /* Espacio a la izquierda del texto */
-    margin: 2%; /* Margen inferior opcional */
+    padding-left: 2%; /* Reducir el espacio a la izquierda del texto */
+    margin: 2% 0; /* Reducir el margen superior e inferior */
+  }
+
+  .barra-fina {
+    border: none;
+    height: 2px; /* Grosor de la barra */
+    background-color: #741276; /* Color de la barra */
+    margin: 0; /* Eliminar márgenes */
+    width: 90%; /* Ancho deseado para la barra */
+    max-width: 800px; /* Ancho máximo para asegurarse de que no se extienda demasiado en pantallas grandes */
+    margin-left: auto; /* Centrar la barra */
+    margin-right: auto; /* Centrar la barra */
+    margin-bottom: 20px;
+  }
+  .contenedor img {
+    width: 92%; /* Ancho deseado para la imagen */
+    height: auto; /* Altura automática para mantener la proporción */
+    margin-left: 4%;
+    margin-right: 4%; /* Espacio a la derecha de la imagen */
 }
+
   .texto-con-barra::before {
-    content: ''; /* Contenido del pseudo-elemento (en este caso, una barra) */
-    position: absolute; /* Posicionamiento absoluto en relación con el contenedor padre */
-    top: 0; /* Ubicación desde la parte superior del contenedor */
-    left: 0; /* Ubicación desde el borde izquierdo del contenedor */
-    margin: 4px;
-    width: 1%; /* Ancho de la barra */
-    height: 100%; /* Altura de la barra (igual a la altura del contenedor) */
-    background-color: #741276; /* Color de la barra (cambia #ff0000 por el color deseado) */
-}
+    content: ''; /* Eliminar el pseudo-elemento */
+    position: static; /* Restaurar la posición estática */
+    display: block;
+    height: auto;
+    border-left: 3px solid #741276; /* Agregar un borde izquierdo como barra */
+    margin-right: 4%; /* Agregar espacio a la derecha del borde */
+    margin-bottom: 2%; /* Añadir espacio inferior */
+  }
 }
 
 footer{
