@@ -87,7 +87,8 @@ a:hover {
 
 @media (max-width: 768px) {
   .barra_de_navegacion {
-    display: list-item;
+    display: block;
+    width: 100%;
   }
   .right{
     margin-left: 9%;
@@ -146,6 +147,14 @@ a:hover {
     margin-right: auto; /* Centrar la barra */
     margin-bottom: 20px;
   }
+  .contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .right{
+    margin-right: auto;
+}
   .contenedor img {
     width: 92%; /* Ancho deseado para la imagen */
     height: auto; /* Altura automática para mantener la proporción */
@@ -196,11 +205,13 @@ footer{
 
   @media (max-width: 768px) {
     .contenedor-footer {
-        display: list-item
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     .contenedor {
     position: relative;
-    display: list-item;
+    display: flex;
     justify-content: space-between; /* Distribuir los elementos uniformemente */
     align-items: center; /* Centrar verticalmente los elementos */
     margin-bottom: 5%; /* Espacio entre secciones */

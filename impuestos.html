@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultores M&B</title>
+    <link rel="icon" type="image/x-icon" href="/imagen/Logo accenture.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="archivo.css">
+    <style>
+        /* Estilos personalizados */
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .calculator-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        .calculator {
+            width: 33%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        @media (max-width: 768px) {
+            .calculator {
+                width: 100%;
+            }
+            .barra_de_navegacion, .contenedor-footer {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        footer {
+            background: #e8e5e5;
+            padding-top: 1%;
+            overflow: hidden;
+            text-align: center;
+            width: 100%;
+        }
+        
+        .contenedor-footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            width: 100%;
+            padding-bottom: 1%;
+            border-bottom: 1px solid #ccc;
+        }
+        .contenido-footer {
+            flex: 1 1 100px;
+            margin: 10px;
+        }
+        .titulo-final {
+            margin-top: 10px;
+        }
+        .btn-primary {
+            background-color: #741276;
+            border-color: #741276;
+        }
+        .btn-primary:hover {
+            background-color: darkviolet;
+            border-color: darkviolet;
+        }
+        .barra_de_navegacion {
+            background-color: rgba(88, 69, 69, 0.247);
+            padding: 10px;
+        }
+        .center-nav {
+            display: flex;
+            justify-content: space-between;
+            flex-grow: 1;
+            padding: 0 10%;
+        }
+        .left, .right {
+            flex-shrink: 0;
+        }
+        .right{
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="barra_de_navegacion d-flex flex-wrap justify-content-between align-items-center p-2">
+            <div class="left d-flex align-items-center">
+                <img src="/imagen/Logo accenture.jpg" alt="Logo" width="30" height="30">
+                <h6 class="item ms-2">Consultores Melamud & Bagdadi</h6>
+            </div>
+            <div class="center-nav">
+                <a class="center me-3" href="index.html">Inicio</a>
+                <a class="center me-3" href="Que hacemos.html">Que hacemos</a>
+                <a class="center me-3" href="Oficinas.html">Oficinas</a>
+                <a class="center" href="Equipo.html">Equipo</a>
+            </div>
+            <div class="right">
+                <a class="right" href="#footer">Puntos de contacto</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="content container mt-4 mb-4">
+        <div class="calculator-container">
+            <div class="calculator p-3">
+                <h1 class="h4">Calculadora de Impuestos</h1>
+                <label for="categoria">Seleccione Categoría:</label>
+                <select id="categoria" class="form-select">
+                    <option value="a">Categoría A (5%)</option>
+                    <option value="b">Categoría B (10%)</option>
+                    <option value="c">Categoría C (15%)</option>
+                    <option value="d">Categoría D (20%)</option>
+                </select>
+
+                <label for="monto" class="mt-2">Monto Ganado:</label>
+                <input type="number" id="monto" class="form-control" placeholder="Ingrese el monto ganado">
+
+                <button onclick="calcularImpuesto()" class="btn btn-primary mt-3">Calcular Impuesto</button>
+
+                <div class="result mt-3" id="resultado"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div class="contenedor-footer" >
+          <h5 class="titulo-final">@ Melamud & Bagdadi| </h5>
+            <div class="contenido-footer">
+                <h6>Telefono</h6>
+                <p>11-6555-3824</p>
+            </div>
+            <div class="contenido-footer">
+                <h6>Email</h6>
+                <p>rmelamud@itba.edu.ar</p>
+            </div>
+            <div class="contenido-footer">
+                <h6>Direccion</h6>
+                <p>Avenida Cabildo y Virrey Loreto 8A</p>
+            </div>
+        </div>
+        
+      </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function calcularImpuesto() {
+            const categoria = document.getElementById('categoria').value;
+            const monto = parseFloat(document.getElementById('monto').value);
+            let porcentaje = 0;
+
+            switch (categoria) {
+                case 'a':
+                    porcentaje = 0.05;
+                    break;
+                case 'b':
+                    porcentaje = 0.10;
+                    break;
+                case 'c':
+                    porcentaje = 0.15;
+                    break;
+                case 'd':
+                    porcentaje = 0.20;
+                    break;
+                default:
+                    porcentaje = 0;
+            }
+
+            if (!isNaN(monto) && monto > 0) {
+                const impuesto = monto * porcentaje;
+                document.getElementById('resultado').innerText = `El impuesto a pagar es: $${impuesto.toFixed(2)}`;
+            } else {
+                document.getElementById('resultado').innerText = 'Por favor, ingrese un monto válido.';
+            }
+        }
+    </script>
+</body>
+</html>
