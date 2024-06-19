@@ -216,3 +216,87 @@ footer{
     align-items: center; /* Centrar verticalmente los elementos */
     margin-bottom: 5%; /* Espacio entre secciones */
   }}
+
+
+
+        /* Estilos personalizados */
+        body, html {
+          height: 100%;
+          margin: 0;
+          display: flex;
+          flex-direction: column;
+      }
+      .content {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+      }
+      .calculator-container {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+      }
+      .calculator {
+          width: 33%;
+          padding: 20px;
+          border: 1px solid #ccc;
+          border-radius: 10px;
+      }
+      @media (max-width: 768px) {
+          .calculator {
+              width: 100%;
+          }
+          .barra_de_navegacion, .contenedor-footer {
+              flex-direction: column;
+              align-items: center;
+          }
+      }
+      footer {
+          background: #e8e5e5;
+          padding-top: 1%;
+          overflow: hidden;
+          text-align: center;
+          width: 100%;
+      }
+      
+      .contenedor-footer {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+          width: 100%;
+          padding-bottom: 1%;
+          border-bottom: 1px solid #ccc;
+      }
+      .contenido-footer {
+          flex: 1 1 100px;
+          margin: 10px;
+      }
+      .titulo-final {
+          margin-top: 10px;
+      }
+      .btn-primary {
+          background-color: #741276;
+          border-color: #741276;
+      }
+      .btn-primary:hover {
+          background-color: darkviolet;
+          border-color: darkviolet;
+      }
+      .barra_de_navegacion {
+          background-color: rgba(88, 69, 69, 0.247);
+          padding: 10px;
+      }
+      .center-nav {
+          display: flex;
+          justify-content: space-between;
+          flex-grow: 1;
+          padding: 0 10%;
+      }
+      .left, .right {
+          flex-shrink: 0;
+      }
+      .right{
+          margin-right: auto;
+      }
